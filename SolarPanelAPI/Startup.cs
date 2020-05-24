@@ -13,14 +13,18 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using SolarPanelAPI.Models;
 using Swashbuckle.AspNetCore.Swagger;
+using Swashbuckle.Swagger;
+using Microsoft.OpenApi.Models;
+using Microsoft.Extensions.Hosting;
 
 namespace SolarPanelAPI
 {
     public class Startup
     {
-        public IHostingEnvironment Environment { get; }
+        public IHostEnvironment Environment { get; }
         private string _connectionString = string.Empty;
-        public Startup(IConfiguration configuration, IHostingEnvironment environment)
+
+        public Startup(IConfiguration configuration, IHostEnvironment environment)
         {
             Configuration = configuration;
             Environment = environment;
@@ -29,20 +33,22 @@ namespace SolarPanelAPI
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
+        [Obsolete]
         public void ConfigureServices(IServiceCollection services)
         {
-            _connectionString = this.Environment.IsDevelopment() ? Configuration["SolarPanelAPIConnection"] : Configuration.GetConnectionString("DefaultConnection");
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            
+            _connectionString = !Environment.IsDevelopment() ? Configuration["SolarPanelAPIConnection"] : Configuration.GetConnectionString("DefaultConnection");
+            services.AddMvc(m => m.EnableEndpointRouting = false).SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
             services.AddDbContext<SolarPanelAPIContext>(options => options.UseSqlServer(_connectionString));
             // Register the Swagger generator, defining 1 or more Swagger documents
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new Info { Title = "Solar Panels API", Version = "v1.0" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Solar Panels API", Version = "v1.0" });
             });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostEnvironment env)
         {
             if (env.IsDevelopment())
             {

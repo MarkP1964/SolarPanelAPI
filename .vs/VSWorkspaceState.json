@@ -1,0 +1,10 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\SolarPanelAPI",
+    "\\SolarPanelAPI\\Controllers",
+    "\\SolarPanelAPI\\Models"
+  ],
+  "SelectedNode": "\\SolarPanelAPI\\Models\\SolarPanelAPIContext.cs",
+  "PreviewInSolutionExplorer": false
+}

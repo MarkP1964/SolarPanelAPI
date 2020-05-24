@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using SolarPanelAPI.Models;
-using Newtonsoft.Json.Linq;
-using Newtonsoft.Json;
-using Microsoft.EntityFrameworkCore;
 using System.Data.SqlClient;
+using System.Linq;
+using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json.Linq;
+using SolarPanelAPI.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace SolarPanelAPI.Controllers
 {
@@ -110,7 +108,7 @@ namespace SolarPanelAPI.Controllers
                 decimal value = newReading.Reading;
                 SqlParameter[] sqlParameters = { new SqlParameter("@reading", value), new SqlParameter("@currDate", date) };
 
-                _context.Database.ExecuteSqlCommand($"exec SetDailyReadingAndFillInBlanks @reading, @currDate", sqlParameters);
+                _context.Database.ExecuteSqlRaw($"exec SetDailyReadingAndFillInBlanks @reading, @currDate", sqlParameters);
             }
             catch (Exception ex)
             {
