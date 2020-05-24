@@ -1,34 +1,35 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mark_\\Source\\repos\\SolarPanelAPI\\SolarPanelAPI\\SolarPanelAPI.csproj": {}
+    "C:\\Users\\mark_\\Source\\Repos\\MarkP1964\\SolarPanelAPI\\SolarPanelAPI\\SolarPanelAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mark_\\Source\\repos\\SolarPanelAPI\\SolarPanelAPI\\SolarPanelAPI.csproj": {
+    "C:\\Users\\mark_\\Source\\Repos\\MarkP1964\\SolarPanelAPI\\SolarPanelAPI\\SolarPanelAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mark_\\Source\\repos\\SolarPanelAPI\\SolarPanelAPI\\SolarPanelAPI.csproj",
+        "projectUniqueName": "C:\\Users\\mark_\\Source\\Repos\\MarkP1964\\SolarPanelAPI\\SolarPanelAPI\\SolarPanelAPI.csproj",
         "projectName": "SolarPanelAPI",
-        "projectPath": "C:\\Users\\mark_\\Source\\repos\\SolarPanelAPI\\SolarPanelAPI\\SolarPanelAPI.csproj",
+        "projectPath": "C:\\Users\\mark_\\Source\\Repos\\MarkP1964\\SolarPanelAPI\\SolarPanelAPI\\SolarPanelAPI.csproj",
         "packagesPath": "C:\\Users\\mark_\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mark_\\Source\\repos\\SolarPanelAPI\\SolarPanelAPI\\obj\\",
+        "outputPath": "C:\\Users\\mark_\\Source\\Repos\\MarkP1964\\SolarPanelAPI\\SolarPanelAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
           "C:\\Users\\mark_\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp2.2"
+          "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp2.2": {
+          "netcoreapp3.1": {
             "projectReferences": {}
           }
         },
@@ -39,35 +40,73 @@
         }
       },
       "frameworks": {
-        "netcoreapp2.2": {
+        "netcoreapp3.1": {
           "dependencies": {
-            "Microsoft.AspNetCore.App": {
-              "suppressParent": "All",
+            "DocumentFormat.OpenXml.DotNet.Core": {
               "target": "Package",
-              "version": "[2.2.0, )",
-              "autoReferenced": true
+              "version": "[1.0.1, )"
+            },
+            "Microsoft.AspNetCore": {
+              "target": "Package",
+              "version": "[2.2.0, )"
             },
             "Microsoft.AspNetCore.Razor.Design": {
               "suppressParent": "All",
               "target": "Package",
               "version": "[2.2.0, )"
             },
-            "Microsoft.NETCore.App": {
-              "suppressParent": "All",
+            "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[2.2.0, )",
-              "autoReferenced": true
+              "version": "[3.1.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "Microsoft.NETCore.App": {
+              "target": "Package",
+              "version": "[2.2.8, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
+            "Swashbuckle.AspNetCore.Swagger": {
+              "target": "Package",
+              "version": "[5.3.3, )"
+            },
+            "Swashbuckle.Core": {
+              "target": "Package",
+              "version": "[5.6.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.1, )"
             },
             "swashbuckle.aspnetcore": {
               "target": "Package",
-              "version": "[4.0.1, )"
+              "version": "[5.3.3, )"
             }
           },
           "imports": [
-            "net461"
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
