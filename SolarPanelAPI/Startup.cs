@@ -1,19 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 using SolarPanelAPI.Models;
-using Swashbuckle.AspNetCore.Swagger;
-using Swashbuckle.Swagger;
 using Microsoft.OpenApi.Models;
 using Microsoft.Extensions.Hosting;
 
@@ -37,7 +29,7 @@ namespace SolarPanelAPI
         public void ConfigureServices(IServiceCollection services)
         {
             
-            _connectionString = !Environment.IsDevelopment() ? Configuration["SolarPanelAPIConnection"] : Configuration.GetConnectionString("DefaultConnection");
+            _connectionString = Configuration.GetConnectionString("DefaultConnection");
             services.AddMvc(m => m.EnableEndpointRouting = false).SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
             services.AddDbContext<SolarPanelAPIContext>(options => options.UseSqlServer(_connectionString));
             // Register the Swagger generator, defining 1 or more Swagger documents

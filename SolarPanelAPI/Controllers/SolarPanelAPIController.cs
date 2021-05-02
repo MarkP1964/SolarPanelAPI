@@ -121,8 +121,8 @@ namespace SolarPanelAPI.Controllers
         private List<DailyReadings> GetMonthlyView()
         {
             return _context.DailyReadings
-            .GroupBy(d => new { Year = d.Date.Year, Month = d.Date.Month })
             .ToList()
+            .GroupBy(d => new { Year = d.Date.Year, Month = d.Date.Month })
             .Select(d => new DailyReadings
             {
                 Date = new DateTime(d.Key.Year, d.Key.Month, 1),
@@ -136,7 +136,7 @@ namespace SolarPanelAPI.Controllers
 
         private List<DailyReadings> GetAnnualView()
         {
-            return _context.DailyReadings
+            return _context.DailyReadings.ToList()
             .GroupBy(d => new { Year = d.Date.Year })
             .ToList()
             .Select(d => new DailyReadings

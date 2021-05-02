@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mark_\\Source\\Repos\\MarkP1964\\SolarPanelAPI\\SolarPanelAPI\\SolarPanelAPI.csproj": {}
+    "C:\\Users\\mark_\\source\\repos\\MarkP1964\\SolarPanelAPI\\SolarPanelAPI\\SolarPanelAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mark_\\Source\\Repos\\MarkP1964\\SolarPanelAPI\\SolarPanelAPI\\SolarPanelAPI.csproj": {
+    "C:\\Users\\mark_\\source\\repos\\MarkP1964\\SolarPanelAPI\\SolarPanelAPI\\SolarPanelAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mark_\\Source\\Repos\\MarkP1964\\SolarPanelAPI\\SolarPanelAPI\\SolarPanelAPI.csproj",
+        "projectUniqueName": "C:\\Users\\mark_\\source\\repos\\MarkP1964\\SolarPanelAPI\\SolarPanelAPI\\SolarPanelAPI.csproj",
         "projectName": "SolarPanelAPI",
-        "projectPath": "C:\\Users\\mark_\\Source\\Repos\\MarkP1964\\SolarPanelAPI\\SolarPanelAPI\\SolarPanelAPI.csproj",
+        "projectPath": "C:\\Users\\mark_\\source\\repos\\MarkP1964\\SolarPanelAPI\\SolarPanelAPI\\SolarPanelAPI.csproj",
         "packagesPath": "C:\\Users\\mark_\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mark_\\Source\\Repos\\MarkP1964\\SolarPanelAPI\\SolarPanelAPI\\obj\\",
+        "outputPath": "C:\\Users\\mark_\\source\\repos\\MarkP1964\\SolarPanelAPI\\SolarPanelAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -30,6 +30,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -41,17 +42,13 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "DocumentFormat.OpenXml.DotNet.Core": {
               "target": "Package",
               "version": "[1.0.1, )"
             },
             "Microsoft.AspNetCore": {
-              "target": "Package",
-              "version": "[2.2.0, )"
-            },
-            "Microsoft.AspNetCore.Razor.Design": {
-              "suppressParent": "All",
               "target": "Package",
               "version": "[2.2.0, )"
             },
@@ -71,13 +68,21 @@
               "target": "Package",
               "version": "[12.0.3, )"
             },
+            "ServiceStack.Api.Swagger": {
+              "target": "Package",
+              "version": "[5.11.0, )"
+            },
             "Swashbuckle.AspNetCore.Swagger": {
               "target": "Package",
-              "version": "[5.3.3, )"
+              "version": "[6.1.4, )"
             },
-            "Swashbuckle.Core": {
+            "Swashbuckle.AspNetCore.SwaggerGen": {
               "target": "Package",
-              "version": "[5.6.0, )"
+              "version": "[6.1.4, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerUI": {
+              "target": "Package",
+              "version": "[6.1.4, )"
             },
             "System.Data.SqlClient": {
               "target": "Package",
@@ -85,7 +90,7 @@
             },
             "swashbuckle.aspnetcore": {
               "target": "Package",
-              "version": "[5.3.3, )"
+              "version": "[6.1.4, )"
             }
           },
           "imports": [
@@ -106,7 +111,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }
