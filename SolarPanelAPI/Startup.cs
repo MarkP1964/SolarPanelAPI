@@ -16,6 +16,7 @@ namespace SolarPanelAPI
     {
         public IHostEnvironment Environment { get; }
         private string _connectionString = string.Empty;
+        private const string _corsPolicy = "SiteCORSPolicy";
 
         public Startup(IConfiguration configuration, IHostEnvironment environment)
         {
@@ -48,7 +49,7 @@ namespace SolarPanelAPI
 
             services.AddCors(options =>
             {
-                options.AddPolicy("SiteCorsPolicy", corsBuilder.Build());
+                options.AddPolicy(_corsPolicy, corsBuilder.Build());
             });
         }
 
@@ -74,7 +75,7 @@ namespace SolarPanelAPI
             app.UseHttpsRedirection();
             app.UseMvc();
 
-            app.UseCors("SiteCorsPolicy");
+            app.UseCors(_corsPolicy);
         }
     }
 }

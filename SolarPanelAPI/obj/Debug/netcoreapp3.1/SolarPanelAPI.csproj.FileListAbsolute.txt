@@ -1,4 +1,3 @@
-C:\Users\mark_\Source\Repos\MarkP1964\SolarPanelAPI\SolarPanelAPI\obj\Debug\netcoreapp3.1\SolarPanelAPI.csprojAssemblyReference.cache
 C:\Users\mark_\Source\Repos\MarkP1964\SolarPanelAPI\SolarPanelAPI\obj\Debug\netcoreapp3.1\SolarPanelAPI.AssemblyInfoInputs.cache
 C:\Users\mark_\Source\Repos\MarkP1964\SolarPanelAPI\SolarPanelAPI\obj\Debug\netcoreapp3.1\SolarPanelAPI.AssemblyInfo.cs
 C:\Users\mark_\source\repos\MarkP1964\SolarPanelAPI\SolarPanelAPI\bin\Debug\netcoreapp3.1\appsettings.Development.json
