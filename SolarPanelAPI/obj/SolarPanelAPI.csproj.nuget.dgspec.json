@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mark_\\source\\repos\\MarkP1964\\SolarPanelAPI\\SolarPanelAPI\\SolarPanelAPI.csproj": {}
+    "C:\\Users\\mark_\\Source\\Repos\\MarkP1964\\SolarPanelAPI\\SolarPanelAPI\\SolarPanelAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mark_\\source\\repos\\MarkP1964\\SolarPanelAPI\\SolarPanelAPI\\SolarPanelAPI.csproj": {
+    "C:\\Users\\mark_\\Source\\Repos\\MarkP1964\\SolarPanelAPI\\SolarPanelAPI\\SolarPanelAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mark_\\source\\repos\\MarkP1964\\SolarPanelAPI\\SolarPanelAPI\\SolarPanelAPI.csproj",
+        "projectUniqueName": "C:\\Users\\mark_\\Source\\Repos\\MarkP1964\\SolarPanelAPI\\SolarPanelAPI\\SolarPanelAPI.csproj",
         "projectName": "SolarPanelAPI",
-        "projectPath": "C:\\Users\\mark_\\source\\repos\\MarkP1964\\SolarPanelAPI\\SolarPanelAPI\\SolarPanelAPI.csproj",
+        "projectPath": "C:\\Users\\mark_\\Source\\Repos\\MarkP1964\\SolarPanelAPI\\SolarPanelAPI\\SolarPanelAPI.csproj",
         "packagesPath": "C:\\Users\\mark_\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mark_\\source\\repos\\MarkP1964\\SolarPanelAPI\\SolarPanelAPI\\obj\\",
+        "outputPath": "C:\\Users\\mark_\\Source\\Repos\\MarkP1964\\SolarPanelAPI\\SolarPanelAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

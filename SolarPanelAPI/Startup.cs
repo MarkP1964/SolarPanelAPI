@@ -8,6 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using SolarPanelAPI.Models;
 using Microsoft.OpenApi.Models;
 using Microsoft.Extensions.Hosting;
+using Microsoft.AspNetCore.Cors.Infrastructure;
 
 namespace SolarPanelAPI
 {
@@ -28,7 +29,7 @@ namespace SolarPanelAPI
         [Obsolete]
         public void ConfigureServices(IServiceCollection services)
         {
-            
+
             _connectionString = Configuration.GetConnectionString("DefaultConnection");
             services.AddMvc(m => m.EnableEndpointRouting = false).SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
             services.AddDbContext<SolarPanelAPIContext>(options => options.UseSqlServer(_connectionString));
@@ -36,6 +37,18 @@ namespace SolarPanelAPI
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Solar Panels API", Version = "v1.0" });
+            });
+
+            //setup CORS (https://stackoverflow.com/questions/40043097/cors-in-net-core)
+            var corsBuilder = new CorsPolicyBuilder();
+            corsBuilder.AllowAnyHeader();
+            corsBuilder.AllowAnyMethod();
+            corsBuilder.AllowAnyOrigin();
+            //corsBuilder.AllowCredentials();
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("SiteCorsPolicy", corsBuilder.Build());
             });
         }
 
@@ -60,6 +73,8 @@ namespace SolarPanelAPI
 
             app.UseHttpsRedirection();
             app.UseMvc();
+
+            app.UseCors("SiteCorsPolicy");
         }
     }
 }

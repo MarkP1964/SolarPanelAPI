@@ -6,9 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json.Linq;
 using SolarPanelAPI.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Cors;
 
 namespace SolarPanelAPI.Controllers
 {
+    [EnableCors("SiteCorsPolicy")]
     [Route("[controller]")]
     [ApiController]
     public class SolarPanelAPIController : Controller

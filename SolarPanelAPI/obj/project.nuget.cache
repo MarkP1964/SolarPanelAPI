@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3Zys3u1LcEIAzjn70UkicClOcw3ors3se9lLcQA/JvQcgOov4EvWvoi+OpMh0E384DfB7OuO8tvDuXB6zV0P0g==",
+  "dgSpecHash": "1VoBji3Js362D+EawlgVxLboU5ZEqE/lUjQOIcYFnYxjy9/p+gjLsH80jOjdSTOg9mhjNZSR85jNZfGui+Xq0g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mark_\\source\\repos\\MarkP1964\\SolarPanelAPI\\SolarPanelAPI\\SolarPanelAPI.csproj",
+  "projectFilePath": "C:\\Users\\mark_\\Source\\Repos\\MarkP1964\\SolarPanelAPI\\SolarPanelAPI\\SolarPanelAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mark_\\.nuget\\packages\\documentformat.openxml.dotnet.core\\1.0.1\\documentformat.openxml.dotnet.core.1.0.1.nupkg.sha512",
     "C:\\Users\\mark_\\.nuget\\packages\\microsoft.aspnetcore\\2.2.0\\microsoft.aspnetcore.2.2.0.nupkg.sha512",
